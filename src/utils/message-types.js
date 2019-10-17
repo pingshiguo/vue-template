@@ -1,0 +1,11 @@
+export const MSG_100 = 100
+export const MSG_101 = 101
+export const MSG_102 = 102
+export const MSG_103 = 103
+export const MSG_104 = 104
+export const MSG_105 = 105
+export const MSG_106 = 106
+export const MSG_107 = 107
+export const MSG_108 = 108
+export const MSG_109 = 109
+export const MSG_110 = 110

@@ -1,0 +1,61 @@
+top-1px-border($color)
+  &:before
+    content ''
+    position absolute
+    top 0
+    right 0
+    left 0
+    height 1px
+    border-top 1px solid $color
+    transform-origin 0 0
+    transform scaleY(.5)
+
+right-1px-border($color)
+  &:after
+    content ''
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    width 1px
+    border-right 1px solid $color
+    transform-origin 100% 0
+    transform scaleX(.5)
+
+bottom-1px-border($color)
+  &:after
+    content ''
+    position absolute
+    right 0
+    bottom 0
+    left 0
+    height 1px
+    border-bottom 1px solid $color
+    transform-origin 0 100%
+    transform scaleY(.5)
+
+left-1px-border($color)
+  &:before
+    content ''
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    width 1px
+    border-left 1px solid $color
+    transform-origin 0 0
+    transform scaleX(.5)
+
+wrap-1px-border($color, $radius)
+  &:after
+    content ''
+    position absolute
+    top 0
+    left 0
+    width 200%
+    height 200%
+    box-sizing border-box
+    border 1px solid $color
+    border-radius $radius
+    transform-origin 0 0
+    transform scale(0.5)

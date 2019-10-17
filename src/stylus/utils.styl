@@ -1,0 +1,58 @@
+@import "variable.styl"
+@import "mixin.styl"
+
+.flex
+  display flex
+
+  &.is-inline
+    display inline-flex
+
+  &.is-column
+    flex-direction column
+
+  &.is-wrap
+    flex-wrap wrap
+
+  &.is-nowrap
+    flex-wrap nowrap
+
+  &.is-center
+    justify-content center
+
+  &.is-middle
+    align-items center
+
+.flex-item
+  flex 1
+
+.toolbar
+  position fixed
+  top 0
+  right 0
+  left 0
+  z-index 1
+  padding 0 48px
+  background #fff
+  bottom-1px-border($color-border)
+
+  .nav
+    height 48px
+
+  .nav-item
+    font-size $font-size-large
+    color $color-dark
+    border-bottom 2px solid transparent
+
+    &.is-active
+      border-color $color-theme
+      color $color-theme
+
+.form
+  color $color-dark
+
+.load-more
+  padding 8px 16px
+  line-height 2
+  text-align center
+  font-size $font-size-medium
+  color $color-light
