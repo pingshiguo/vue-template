@@ -3,10 +3,12 @@ import router from '../router'
 import store from '../store'
 import { isJSON } from '../utils/utils'
 import { getToken } from '../utils/auth'
-import { FAILURE_CODE } from './config'
+import config, { FAILURE_CODE } from './config'
 import { Toast } from 'mint-ui'
 
-const instance = axios.create()
+const instance = axios.create({
+  baseURL: config.baseURL
+})
 
 instance.defaults.transformRequest = [
   function (data) {

@@ -4,15 +4,13 @@ import router from './router'
 import store from './store'
 import i18n from './lang'
 
-import http from './request/http'
-import config from './request/config'
 import { getToken } from './utils/auth'
-import './utils/mint-ui'
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 import 'normalize.css'
+import './utils/mint-ui'
 import './stylus/index.styl'
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -50,24 +48,11 @@ router.afterEach(() => {
   NProgress.done()
 })
 
-if (isProd) {
-  http.get('./config.json')
-    .then(res => {
-      let { baseURL, socketURL, assetsURL } = res.data
-      Object.assign(config, { baseURL, socketURL, assetsURL })
-      startApp()
-    })
-} else {
-  startApp()
-}
-
-function startApp () {
-  /* eslint-disable no-new */
-  new Vue({
-    el: '#app',
-    router,
-    store,
-    i18n,
-    render: h => h(App)
-  })
-}
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store,
+  i18n,
+  render: h => h(App)
+})
