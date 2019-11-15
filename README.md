@@ -1,21 +1,26 @@
 # vue-template
 
-> A Vue.js project
+> A Vue.js template project
 
-## Build Setup
+## 项目目录
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+.
+├── build                   # build 脚本
+├── config                  # prod/dev build config 文件
+├── index.html              # Vue 模板页面
+├── package.json
+├── src                     # Vue 核心代码
+│   ├── assets              # 静态文件
+│   ├── components          # 基础组件
+│   ├── lang                # 国际化模块
+│   ├── request             # HTTP 模块
+│   ├── router              # 路由模块
+│   ├── store               # Vuex 状态管理模块
+│   ├── stylus              # 全局样式
+│   ├── utils               # 通用工具函数
+│   └── views               # 路由页面
+│   ├── App.vue             # Vue 根组件
+│   ├── main.js             # Vue 入口文件
+└── static                  # 静态资源(非打包)
+```
